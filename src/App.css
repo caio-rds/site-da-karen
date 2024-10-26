@@ -33,3 +33,20 @@
   margin-top: 40px;
   color: #333;
 }
+
+.button-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 4px;
+  width: 48.85%;
+  padding-top: 4px;
+  color: #333;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 94%;
+  }
+
+}

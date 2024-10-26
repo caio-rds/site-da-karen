@@ -40,9 +40,9 @@ function HomeTemplate() {
                     Conheça um pouco mais sobre mim e o que posso fazer por você.
                 </Typography>
                 <Services />
-                <Box sx={{display: 'flex', justifyContent: 'center', gap: {xs: '4px', md: '12px'}, flexDirection: {xs: 'column', md: 'row'}}}>
-                    <Button variant="contained" color="primary" sx={{minWidth: '40%'}} onClick={showSocialsTrue}>FAÇA UMA CONSULTA</Button>
-                    <Button variant="contained" color="primary" sx={{minWidth: '40%'}} onClick={showProjectsTrue}>VEJA MEUS PROJETOS</Button>
+                <Box className={'button-area'}>
+                    <Button variant="contained" color="primary" fullWidth onClick={showSocialsTrue}>FAÇA UMA CONSULTA</Button>
+                    <Button variant="contained" color="primary" fullWidth onClick={showProjectsTrue}>VEJA MEUS PROJETOS</Button>
                 </Box>
             </div>
             <Projects close={showProjectsFalse} open={projects}/>
