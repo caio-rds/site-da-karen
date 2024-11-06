@@ -1,7 +1,6 @@
 import { Typography } from "@mui/material";
-import Icon from '@mui/material/Icon';
 import background from '../../assets/background.png';
-import DesignServicesIcon from '@mui/icons-material/DesignServices';
+import { MdOutlineDesignServices } from "react-icons/md";
 import './styles.css'
 
 
@@ -12,7 +11,7 @@ export default function FrontImage() {
             <img src={background} alt="Karen Arievilo"/>
             <span>
                 <div className="header">
-                    <Icon component={DesignServicesIcon} sx={{ fontSize: 56}} />
+                    <MdOutlineDesignServices style={{width: '50px', height: '50px'}}/>
                     <Typography variant="h3">Karen Arievilo</Typography>
                 </div>
                 

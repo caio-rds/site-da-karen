@@ -1,4 +1,5 @@
 import {Typography, Box, Button } from '@mui/material';
+import { useEffect } from 'react';
 
 import FrontImage from "../../components/front/index.jsx";
 import Services from "../../components/services/index.jsx";
@@ -31,6 +32,14 @@ function HomeTemplate() {
         setSocials(false);
     }
 
+    useEffect(() => {
+        if (projects || socials) {
+            document.getElementsByClassName('content')[0].style.filter = 'blur(5px)';
+        } else {
+            document.getElementsByClassName('content')[0].style.filter = 'none';
+        }
+    }, [projects, socials]);
+
 
     return (
         <div className={'content'}>            
@@ -41,8 +50,8 @@ function HomeTemplate() {
                 </Typography>
                 <Services />
                 <Box className={'button-area'}>
-                    <Button variant="contained" color="primary" fullWidth onClick={showSocialsTrue}>FAÇA UMA CONSULTA</Button>
-                    <Button variant="contained" color="primary" fullWidth onClick={showProjectsTrue}>VEJA MEUS PROJETOS</Button>
+                    <Button color="primary" fullWidth onClick={showSocialsTrue}>FAÇA UMA CONSULTA</Button>
+                    <Button color="primary" fullWidth onClick={showProjectsTrue}>VEJA MEUS PROJETOS</Button>
                 </Box>
             </div>
             <Projects close={showProjectsFalse} open={projects}/>
